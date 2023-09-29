@@ -10,8 +10,11 @@ const theme = extendTheme({
     heading: "'Inter', sans-serif"
   },
   colors: {
-    light: {},
-    dark: {}
+    light: {
+      primary: '#007BFF',
+      secondary: '#6C757D'
+    },
+    dark: { primary: '#61DAFB', secondary: '#6C757D' }
   }
 })
 export default theme
