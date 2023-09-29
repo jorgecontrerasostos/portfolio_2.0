@@ -1,7 +1,13 @@
 import React from 'react'
+import { Box } from '@chakra-ui/react'
+import ColorModeToggle from './ColorModeToggle'
 
 const Navbar = () => {
-  return <div>Navbar</div>
+  return (
+    <Box>
+      <ColorModeToggle />
+    </Box>
+  )
 }
 
 export default Navbar
