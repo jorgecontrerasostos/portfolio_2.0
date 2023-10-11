@@ -1,6 +1,6 @@
 // theme.js
 import { extendTheme } from '@chakra-ui/react'
-import { mode } from '@chakra-ui/theme-tools'
+import { mode, createBreakPoints } from '@chakra-ui/theme-tools'
 
 const theme = extendTheme({
   config: {
@@ -14,6 +14,10 @@ const theme = extendTheme({
     dark: {
       background: 'black', // Dark mode background color
       overriddenBackground: 'black' // Override the dark mode background color
+    },
+    customSwitchColors: {
+      100: '#0C3ACF',
+      200: '#0C3ACF'
     }
   },
   styles: {

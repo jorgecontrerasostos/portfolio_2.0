@@ -6,7 +6,7 @@ import { mode } from '@chakra-ui/theme-tools'
 
 const Layout = ({ children }) => {
   return (
-    <Container maxWidth='1440px' mt={12}>
+    <Container maxWidth='container.xl' mt={12}>
       <Navbar />
       {children}
       <Footer />
