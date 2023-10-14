@@ -16,8 +16,8 @@ const theme = extendTheme({
       overriddenBackground: 'black' // Override the dark mode background color
     },
     customSwitchColors: {
-      100: '#0C3ACF',
-      200: '#0C3ACF'
+      100: '#13B0CF',
+      200: '#13B0CF'
     }
   },
   styles: {

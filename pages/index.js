@@ -1,6 +1,5 @@
 import Head from 'next/head'
-import { Text } from '@chakra-ui/react'
-import { Link } from '@chakra-ui/next-js'
+import Hero from '../components/Hero'
 
 export default function Home() {
   return (
@@ -8,7 +7,7 @@ export default function Home() {
       <Head>
         <title>Create Next App</title>
       </Head>
-      <Text fontFamily='body'>Hello</Text>
+      <Hero />
     </>
   )
 }
