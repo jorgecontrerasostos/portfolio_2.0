@@ -7,11 +7,12 @@ import SwitchColorMode from './SwitchColorMode'
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons'
 import { useState } from 'react'
 import AnimatedSection from './AnimatedSection'
+import { motion } from 'framer-motion'
 
 const Navbar = () => {
   const [display, setDisplay] = useState('none')
   return (
-    <AnimatedSection delay={0.1}>
+    <AnimatedSection delay={0.2}>
       <Box w='100%'>
         <Flex
           as='nav'
@@ -22,7 +23,9 @@ const Navbar = () => {
         >
           <Box p='2' display={['flex', 'flex', 'flex', 'flex', 'flex', 'flex']}>
             <Link href='/'>
-              <Icon as={FaTerminal} boxSize={8} />
+              <motion.div whileHover={{ scale: 1.2 }}>
+                <Icon as={FaTerminal} boxSize={8} />
+              </motion.div>
             </Link>
           </Box>
           <HStack
@@ -52,7 +55,9 @@ const Navbar = () => {
                 href='https://github.com/jorgecontrerasostos'
                 target='_blank'
               >
-                <Icon as={FaGithub} boxSize={8} />
+                <motion.div whileHover={{ scale: 1.2 }}>
+                  <Icon as={FaGithub} boxSize={8} />
+                </motion.div>
               </Link>
             </ButtonGroup>
             <HamburgerIcon

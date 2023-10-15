@@ -5,6 +5,7 @@ import { FaLinkedin } from 'react-icons/fa'
 import { SiBuymeacoffee } from 'react-icons/si'
 import { FaXTwitter } from 'react-icons/fa6'
 import { Link } from '@chakra-ui/next-js'
+import { motion } from 'framer-motion'
 
 const Footer = () => {
   return (
@@ -25,17 +26,22 @@ const Footer = () => {
               href='https://www.linkedin.com/in/jorge-contreras-ostos/'
               target='_blank'
             >
-              <Icon as={FaLinkedin} boxSize={7} />
+              <motion.div whileHover={{ scale: 1.2 }}>
+                <Icon as={FaLinkedin} boxSize={7} />
+              </motion.div>
             </Link>
-
             <Link href='https://twitter.com/jorgecontreras' target='_blank'>
-              <Icon as={FaXTwitter} boxSize={7} />
+              <motion.div whileHover={{ scale: 1.2 }}>
+                <Icon as={FaXTwitter} boxSize={7} />
+              </motion.div>
             </Link>
             <Link
               href='https://www.buymeacoffee.com/jorgecontreras'
               target='_blank'
             >
-              <Icon as={SiBuymeacoffee} boxSize={7} />
+              <motion.div whileHover={{ scale: 1.2 }}>
+                <Icon as={SiBuymeacoffee} boxSize={7} />
+              </motion.div>
             </Link>
           </Stack>
         </Container>
