@@ -5,9 +5,9 @@ import {
   Link,
   Image,
   Text,
-  Button,
   Stack,
-  Icon
+  Icon,
+  Divider
 } from '@chakra-ui/react'
 import AnimatedSection from './AnimatedSection'
 import { motion } from 'framer-motion'
@@ -32,12 +32,16 @@ const Projects = () => {
           <div key={project.id}>
             <Stack direction={{ base: 'column', md: 'row' }}>
               <Flex flex={1}>
-                <Image
-                  alt='NASA Photo of the Day Project'
-                  objectFit={'cover'}
-                  src={project.image}
-                  borderRadius='lg'
-                />
+                <Link href={project.link} target='_blank'>
+                  <motion.div whileHover={{ scale: 1.03 }}>
+                    <Image
+                      alt='NASA Photo of the Day Project'
+                      objectFit={'cover'}
+                      src={project.image}
+                      borderRadius='lg'
+                    />
+                  </motion.div>
+                </Link>
               </Flex>
               <Flex p={8} flex={1} align={'center'} justify={'center'}>
                 <Stack spacing={6} w={'full'} maxW={'lg'}>
@@ -66,6 +70,14 @@ const Projects = () => {
                 </Stack>
               </Flex>
             </Stack>
+            <Divider
+              borderColor='gray.400'
+              m='auto'
+              width='120px'
+              borderRadius='md'
+              borderWidth='2px'
+              my={{ base: 0, md: 10 }}
+            />
           </div>
         )
       })}
