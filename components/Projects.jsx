@@ -27,9 +27,9 @@ const Projects = () => {
       >
         Projects
       </Heading>
-      {projects.map((project, idx) => {
+      {projects.map((project) => {
         return (
-          <div key={idx}>
+          <div key={project.id}>
             <Stack direction={{ base: 'column', md: 'row' }}>
               <Flex flex={1}>
                 <Image

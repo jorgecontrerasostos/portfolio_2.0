@@ -1,5 +1,6 @@
 export const projects = [
   {
+    id: crypto.randomUUID(),
     name: 'NASA Photo of the Day',
     description:
       'NASA Photo of the Day is a web app that, using the NASA API, displays the NASA photo of the day along with its explanation.',
