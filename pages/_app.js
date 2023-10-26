@@ -1,7 +1,8 @@
 // pages/_app.js
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, Spinner, Box, CSSReset } from '@chakra-ui/react'
 import theme from '../theme/theme'
 import Layout from '../components/Layout'
+import { useState, useEffect } from 'react'
 
 function MyApp({ Component, pageProps }) {
   return (

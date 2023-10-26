@@ -1,26 +1,41 @@
 import React from 'react'
 import AnimatedSection from './AnimatedSection'
-import { Heading, VStack, Flex, Box, Text } from '@chakra-ui/react'
+import { Heading, VStack, Flex, Box, Text, Divider } from '@chakra-ui/react'
+
+const hobbies = [
+  'Baseball',
+  'Playing ukulele',
+  'Playing videogames',
+  'Coding',
+  'Going out with friends'
+]
 
 const AboutMe = () => {
   return (
     <AnimatedSection delay={0.4}>
       <VStack p={10} textAlign='center'>
         <Heading
-          bgGradient='linear(to-r, #C6CF46, #C463CF)'
           bgClip='text'
           fontSize='5xl'
-          fontWeight='extrabold'
+          fontWeight='bold'
+          bgGradient='linear(to-r, #C6CF46, #C463CF)'
         >
           About Me
         </Heading>
+        <Divider
+          orientation='horizontal'
+          width='70px'
+          borderWidth='4px'
+          borderRadius='md'
+          color='white'
+        />
         <Flex
           justify='center'
           align='center'
           direction={['column', 'column', 'row', 'row']}
           p={4}
         >
-          <Box w='100%' h='100%' textAlign='left'>
+          <Box w='100%' h='100%' textAlign='left' p={4}>
             <Heading textAlign='center'>A Bit About Myself</Heading>
             <br />
             <Text>
@@ -39,9 +54,31 @@ const AboutMe = () => {
               can accomplish anything.&quot;
             </Text>
           </Box>
-          <Box bg='blue' w='100%' h='100%'>
+          <Box w='100%' h='100%'>
             <Heading textAlign='center'>My Hobbies</Heading>
-            <Text></Text>
+            <Flex flexWrap='wrap' gap='4' mt={6}>
+              {hobbies.map((hobby, index) => (
+                <Box
+                  key={index}
+                  borderWidth='1px'
+                  rounded='lg'
+                  bg='white'
+                  width={['100%', '48%', '30%']}
+                  display='flex' // Enable flex display on the Box
+                  justifyContent='center' // Vertically center the text within the box // Adjust the width for different screen sizes
+                >
+                  <Text
+                    fontSize='md'
+                    fontWeight='bold'
+                    align='center'
+                    textAlign='center'
+                    color='black'
+                  >
+                    {hobby}
+                  </Text>
+                </Box>
+              ))}
+            </Flex>
           </Box>
         </Flex>
       </VStack>

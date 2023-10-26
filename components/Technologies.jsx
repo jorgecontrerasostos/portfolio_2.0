@@ -13,7 +13,7 @@ const Technologies = () => {
           bgGradient='linear(to-l, #7928CA, #FF0080)'
           bgClip='text'
           fontSize='5xl'
-          fontWeight='extrabold'
+          fontWeight='bold'
         >
           My Toolbox
         </Heading>
